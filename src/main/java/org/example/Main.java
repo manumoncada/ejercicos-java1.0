@@ -4,47 +4,48 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner Scanner = new Scanner(System.in);
+        String pro1 = "dulces";
+        int prod1 = 1000;
 
-        int cantidadinicial = 50000;
-        int cajero = 50000;
-        boolean cajerito = true;
-        while (cajerito) {
-            System.out.println("""
-                    ingrese una opcion
-                    1 consultar saldo
-                    2 ingresar dinero
-                    3 sacar dinero
-                    4 salir
-                    """);
-            int s = Scanner.nextInt();
-            switch (s) {
-                case 1 -> {
-                    System.out.println("la cantidad disponible es " + cajero);
-                }
-                case 2 -> {
-                    System.out.println("ingrese la cantidad a ingresar");
-                    int ingreso = Scanner.nextInt();
-                    cajero = ingreso + cantidadinicial;
-                }
-                case 3 -> {
-                    System.out.println("¿cuanto dinero desea retirar?");
-                    int retiro = Scanner.nextInt();
-                    if (cajero >= retiro) {
-                        cajero = cajero - retiro;
+        String pro2 = "agua";
+        int prod2 = 2000;
 
-                    } else System.out.println("no cuenta con el saldo suficiente");
+        String pro3 = "chocorramo";
+        int prod3 = 3000;
+
+        String pro4 = "paquete de papas";
+        int prod4 = 4000;
+
+        String pro5 = "gaseosa";
+        int prod5 = 5000;
+
+        System.out.println("Buen dia, a continuacion la lista de nuestros productos disponibles");
+
+        System.out.println("1 " + pro1 + " su valor es de $" + prod1);
+        System.out.println("2 " + pro2 + " su valor es de $" + prod2);
+        System.out.println("3 " + pro3 + " su valor es de $" + prod3);
+        System.out.println("4 " + pro4 + " su valor es de $" + prod4);
+        System.out.println("5 " + pro5 + " su valor es de $" + prod5);
+
+        int total = 0;
+        int cantidadproductos=0;
+        while(cantidadproductos < 5){
+
+            System.out.println("ingrese el numero del producto deseado; para finalizar ingrese 0");
+            int cantidad = Scanner.nextInt();
+
+            switch (cantidad) {
+
+                case 1-> {
+                     total += prod1;
+                    System.out.println("Producto agregado: " + pro1 + " - Total: $" + total);
+
                 }
-                case 4 -> {
-                    return;
-                }
+
             }
 
-
         }
-
-
-
     }
-
 }
