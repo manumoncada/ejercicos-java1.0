@@ -43,6 +43,26 @@ public class Main {
                     System.out.println("Producto agregado: " + pro1 + " - Total: $" + total);
 
                 }
+                case 2-> {
+                    total += prod2;
+                 System.out.println("Producto agregado: " + pro2 + " - Total: $" + total);
+
+                }
+                case 3->{
+                    total += prod3;
+                    System.out.println("Producto agregado: " + pro3 + " - Total: $" + total);
+                }
+                case 4->{
+                    total += prod4;
+                    System.out.println("Producto agregado: " + pro4 + " - Total: $" + total);
+                }
+                case 5-> {
+                    total += prod5;
+                    System.out.println("Producto agregado: " + pro5 + " - Total: $" + total);
+                }
+
+
+                }
 
             }
 
