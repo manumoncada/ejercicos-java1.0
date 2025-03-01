@@ -1,50 +1,24 @@
 package org.example;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner Scanner = new Scanner(System.in);
 
-        int cantidadinicial = 50000;
-        int cajero = 50000;
-        boolean cajerito = true;
-        while (cajerito) {
-            System.out.println("""
-                    ingrese una opcion
-                    1 consultar saldo
-                    2 ingresar dinero
-                    3 sacar dinero
-                    4 salir
-                    """);
-            int s = Scanner.nextInt();
-            switch (s) {
-                case 1 -> {
-                    System.out.println("la cantidad disponible es " + cajero);
-                }
-                case 2 -> {
-                    System.out.println("ingrese la cantidad a ingresar");
-                    int ingreso = Scanner.nextInt();
-                    cajero = ingreso + cantidadinicial;
-                }
-                case 3 -> {
-                    System.out.println("¿cuanto dinero desea retirar?");
-                    int retiro = Scanner.nextInt();
-                    if (cajero >= retiro) {
-                        cajero = cajero - retiro;
+        int jugador1 = 0;
+        int jugador2 = 0;
+        int tijera = 1;
+        int papel = 2;
+        int piedra = 3;
 
-                    } else System.out.println("no cuenta con el saldo suficiente");
-                }
-                case 4 -> {
-                    return;
-                }
-            }
+        while(jugador1 < 2 && jugador2 < 2){
+
+            int min = 1, max = 3;
+
+            int valor1 = Random.nextInt(3)+1;
 
 
         }
 
-
-
     }
-
 }
