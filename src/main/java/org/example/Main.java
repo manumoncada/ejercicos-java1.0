@@ -30,41 +30,61 @@ public class Main {
         System.out.println("5 " + pro5 + " su valor es de $" + prod5);
 
         int total = 0;
-        int cantidadproductos=0;
-        while(cantidadproductos < 5){
+        int cantidadproductos = 0;
+        while (cantidadproductos < 5) {
 
             System.out.println("ingrese el numero del producto deseado; para finalizar ingrese 0");
             int cantidad = Scanner.nextInt();
 
+            if (cantidad == 0) {
+                break;
+            }
+
             switch (cantidad) {
 
-                case 1-> {
-                     total += prod1;
+                case 1 -> {
+                    total += prod1;
                     System.out.println("Producto agregado: " + pro1 + " - Total: $" + total);
 
                 }
-                case 2-> {
+                case 2 -> {
                     total += prod2;
-                 System.out.println("Producto agregado: " + pro2 + " - Total: $" + total);
+                    System.out.println("Producto agregado: " + pro2 + " - Total: $" + total);
 
                 }
-                case 3->{
+                case 3 -> {
                     total += prod3;
                     System.out.println("Producto agregado: " + pro3 + " - Total: $" + total);
                 }
-                case 4->{
+                case 4 -> {
                     total += prod4;
                     System.out.println("Producto agregado: " + pro4 + " - Total: $" + total);
                 }
-                case 5-> {
+                case 5 -> {
                     total += prod5;
                     System.out.println("Producto agregado: " + pro5 + " - Total: $" + total);
                 }
 
-
-                }
-
             }
+            cantidadproductos++;
+            ;
+
+        }
+        if (total == 0) {
+            System.out.println("no hay registro de compra");
+        } else {
+            System.out.print("Ingrese el efectivo: $ ");
+            int efectivo = Scanner.nextInt();
+
+            while (efectivo < total) {
+
+                System.out.print("no cuenta con el efectivo necesario");
+                return;
+            }
+            int cambio = (efectivo - total);
+
+            System.out.println("gracias por su compra, su cambio es es de $"+cambio);
+
 
         }
     }
