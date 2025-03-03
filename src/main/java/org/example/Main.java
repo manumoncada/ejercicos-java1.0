@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int dano = 0;
+
         int defensa = 0;
         int ataque = 0;
         double neutro = 0.5;
@@ -48,12 +48,174 @@ public class Main {
                         4 fuego""");
                 int rival= Scanner.nextInt();
                 if (rival==0);
+                System.out.println("ingrese la defensa del rival");
+                defensa = Scanner.nextInt();
+
+                if(defensa>100){
+                    System.out.println("la defensa es demasiado alta");
+                    return;}
+
+                else if (defensa<1){
+                    System.out.println("la defensa es demasiado baja");
+                    return;}
                 switch(rival){
                     case 1-> {
-                        System.out.println(defensa);
+                        //electrico
+                        double dano = (( 50 * (ataque / defensa)) * neutro);
+                        System.out.println("el daño es neutro, por ende su daño final es de "+ dano);
+
+                    }
+                    case 2->{
+                        //agua
+                        double dano = ( (50 * (ataque / defensa)) * superefectivo);
+                        System.out.println("el daño es superefectivo, por ende su daño final es de "+ dano);
+
+                    }
+                    case 3->{
+                        //planta
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+                    }
+                    case 4-> {
+                        //fuego
+                        double dano = ((50 * (ataque / defensa))*efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
                     }
                 }
 
+
+            }
+            case 2->{
+                System.out.println("""
+                        seleccione el tipo de su rival
+                        1 electrico
+                        2 agua
+                        3 planta
+                        4 fuego""");
+                int rival= Scanner.nextInt();
+                if (rival==0);
+                System.out.println("ingrese la defensa del rival");
+                defensa = Scanner.nextInt();
+
+                if(defensa>100){
+                    System.out.println("la defensa es demasiado alta");
+                    return;}
+
+                else if (defensa<1){
+                    System.out.println("la defensa es demasiado baja");
+                    return;}
+
+                switch(rival){
+                    case 1-> {
+                        //electrico
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+
+                    }
+                    case 2->{
+                        //agua
+                        double dano = ( (50 * (ataque / defensa)) * neutro);
+                        System.out.println("el daño es neutro, por ende su daño final es de "+ dano);
+
+                    }
+                    case 3->{
+                        //planta
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+                    }
+                    case 4-> {
+                        //fuego
+                        double dano = ((50 * (ataque / defensa))*superefectivo);
+                        System.out.println("el daño es superefectivo, por ende su daño final es de "+ dano);
+                    }
+                }
+            }
+            case 3->{
+                System.out.println("""
+                        seleccione el tipo de su rival
+                        1 electrico
+                        2 agua
+                        3 planta
+                        4 fuego""");
+                int rival= Scanner.nextInt();
+                if (rival==0);
+                System.out.println("ingrese la defensa del rival");
+                defensa = Scanner.nextInt();
+
+                if(defensa>100){
+                    System.out.println("la defensa es demasiado alta");
+                    return;}
+
+                else if (defensa<1){
+                    System.out.println("la defensa es demasiado baja");
+                    return;}
+                switch(rival){
+                    case 1-> {
+                        //electrico
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+
+                    }
+                    case 2->{
+                        //agua
+                        double dano = ( (50 * (ataque / defensa)) * superefectivo);
+                        System.out.println("el daño es superefectivo, por ende su daño final es de "+ dano);
+
+                    }
+                    case 3->{
+                        //planta
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+                    }
+                    case 4-> {
+                        //fuego
+                        double dano = ((50 * (ataque / defensa))*efectivo);
+                        System.out.println("el daño es neutro, por ende su daño final es de "+ dano);
+                    }
+                }
+            }
+            case 4->{System.out.println("""
+                        seleccione el tipo de su rival
+                        1 electrico
+                        2 agua
+                        3 planta
+                        4 fuego""");
+                int rival= Scanner.nextInt();
+                if (rival==0);
+                System.out.println("ingrese la defensa del rival");
+                defensa = Scanner.nextInt();
+
+                if(defensa>100){
+                    System.out.println("la defensa es demasiado alta");
+                    return;}
+
+                else if (defensa<1){
+                    System.out.println("la defensa es demasiado baja");
+                    return;}
+                switch(rival){
+                    case 1-> {
+                        //electrico
+                        double dano = (( 50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+
+                    }
+                    case 2->{
+                        //agua
+                        double dano = ( (50 * (ataque / defensa)) * neutro);
+                        System.out.println("el daño es neutro, por ende su daño final es de "+ dano);
+
+                    }
+                    case 3->{
+                        //planta
+                        double dano = (( 50 * (ataque / defensa)) * superefectivo);
+                        System.out.println("el daño es superefectivo, por ende su daño final es de "+ dano);
+                    }
+                    case 4-> {
+                        //fuego
+                        double dano = ((50 * (ataque / defensa)) * efectivo);
+                        System.out.println("el daño es efectivo, por ende su daño final es de "+ dano);
+                    }
+                }
 
             }
         }
